@@ -1,4 +1,4 @@
-package med.ApiMed.Domain.Models.Enum;
+package med.ApiMed.Domain.Enum.Enum;
 
 public enum EnumEspecialidade {
 

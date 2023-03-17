@@ -1,20 +1,31 @@
 package med.ApiMed.Controller;
 
+import jakarta.validation.Valid;
+import med.ApiMed.Domain.Mapping.MappingRequestToRepository;
 import med.ApiMed.Domain.Models.DtoDadosCadastroMedico;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import med.ApiMed.Infra.SQlServer.Repository.MedicoRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("cadastro/medico")
 public class CadastroMedicoController {
 
+    @Autowired
+    private MedicoRepository repository;
+    @Autowired
+    private MappingRequestToRepository map;
     @PostMapping
-    public String cadastrar(@RequestBody DtoDadosCadastroMedico Json){
-
-        return "nome é "  + Json.nome();
-
+    @Transactional
+    public String cadastrar(@RequestBody @Valid DtoDadosCadastroMedico request) {
+        try{
+            var mapObject = map.RequestTOEntiteMedico(request);
+            repository.save(mapObject);
+            return "Usuario cadastrado com Sucesso";
+        }catch (Exception ex){
+            return "Erro ao cadastrar o usuario";
+        }
     }
 
 }
