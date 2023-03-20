@@ -4,6 +4,7 @@ import jakarta.persistence.Embeddable;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import med.ApiMed.Domain.DTO.DtoEndereco;
 
 @Embeddable
 @Getter
@@ -18,13 +19,14 @@ public class EntidadeJPAEndereco {
     private String complemento;
     private String cidade;
     private String uf;
-//    public EntidadeJPAEndereco(String lagradouro, String bairro,String cep, String numero,String complemento,String cidade,String uf){
-//        this.lagradouro = lagradouro;
-//        this.bairro = bairro;
-//        this.cep = cep;
-//        this.numero = numero;
-//        this.complemento = complemento;
-//        this.cidade = cidade;
-//        this.uf = uf;
-//    }
+
+    public void AtualizarInformacoes(DtoEndereco endereco){
+        if(endereco.logradouro() != null)this.logradouro = endereco.logradouro();
+        if(endereco.bairro() != null)this.bairro = endereco.bairro();
+        if(endereco.cep() != null) this.cep = endereco.cep();
+        if(endereco.numero() != null)this.numero = endereco.numero();
+        if(endereco.complemento() != null)this.complemento = endereco.complemento();
+        if(endereco.cidade() != null)this.cidade = endereco.cidade();
+        if(endereco.uf() != null)this.uf = endereco.cidade();
+    }
 }

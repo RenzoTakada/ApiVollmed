@@ -1,10 +1,9 @@
 package med.ApiMed.Domain.Mapping;
 
-import med.ApiMed.Domain.Models.DtoDadosCadastroMedico;
+import med.ApiMed.Domain.DTO.DtoDadosCadastroMedico;
 import med.ApiMed.Infra.SQlServer.Models.EntidadeJPAEndereco;
 import med.ApiMed.Infra.SQlServer.Models.EntidadeJPAMedico;
 import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Service;
 
 
 @Component

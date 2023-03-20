@@ -1,4 +1,4 @@
-package med.ApiMed.Domain.Enum.Enum;
+package med.ApiMed.Domain.Enum;
 
 public enum EnumEspecialidade {
 

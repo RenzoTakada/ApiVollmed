@@ -1,4 +1,4 @@
-package med.ApiMed.Domain.Models;
+package med.ApiMed.Domain.DTO;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Pattern;

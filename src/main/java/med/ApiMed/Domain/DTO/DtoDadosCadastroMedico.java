@@ -1,11 +1,11 @@
-package med.ApiMed.Domain.Models;
+package med.ApiMed.Domain.DTO;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Pattern;
-import med.ApiMed.Domain.Enum.Enum.EnumEspecialidade;
+import med.ApiMed.Domain.Enum.EnumEspecialidade;
 
 public record DtoDadosCadastroMedico(
 
