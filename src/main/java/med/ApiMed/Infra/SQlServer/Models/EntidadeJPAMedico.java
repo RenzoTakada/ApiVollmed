@@ -23,7 +23,6 @@ public class EntidadeJPAMedico {
     @Enumerated(EnumType.STRING)
     private EnumEspecialidade especialidade;
     @Enumerated(EnumType.ORDINAL)
-    @Column(name = "conta_ativa")
     private EnumContaAtiva ativa;
     @Embedded //serve para dizer que a entidade endereço esta em uma classe separada
     private EntidadeJPAEndereco Endereco;
