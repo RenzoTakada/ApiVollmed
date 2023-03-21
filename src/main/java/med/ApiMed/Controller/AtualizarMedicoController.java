@@ -20,11 +20,8 @@ public class AtualizarMedicoController {
     @Transactional
     public ResponseEntity atualizando(@RequestBody  DtoDadosAtualizarMedico request){
         var medico = repository.getReferenceById(request.id());
-        try {
-            medico.AtualizarInformacoes(request);
-            return ResponseEntity.ok( new DTODadosDetalhamentoMedico(medico));
-        }catch (Exception ex) {
-            return ResponseEntity.internalServerError().body("Erro ao Atualizar Usuario " + medico.getNome().toString()) ;
-        }
+        medico.AtualizarInformacoes(request);
+        return ResponseEntity.ok(new DTODadosDetalhamentoMedico(medico));
+
     }
 }

@@ -22,14 +22,11 @@ public class CadastroMedicoController {
     @PostMapping
     @Transactional
     public ResponseEntity cadastrar(@RequestBody @Valid DtoDadosCadastroMedico request, UriComponentsBuilder uribuilder) {
-        try{
-            var mapMedico = map.RequestTOEntiteMedico(request);
-            repository.save(mapMedico);
-            var uri = uribuilder.path("/medico/consulta/{id}").buildAndExpand(mapMedico.getId()).toUri();
-            return ResponseEntity.created(uri).body(new DTODadosDetalhamentoMedico(mapMedico));
-        }catch (Exception ex){
-            return ResponseEntity.internalServerError().body( "Erro ao cadastrar o usuario");
-        }
+        var mapMedico = map.RequestTOEntiteMedico(request);
+        repository.save(mapMedico);
+        var uri = uribuilder.path("/medico/consulta/{id}").buildAndExpand(mapMedico.getId()).toUri();
+        return ResponseEntity.created(uri).body(new DTODadosDetalhamentoMedico(mapMedico));
+
     }
 
 }

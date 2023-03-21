@@ -13,6 +13,6 @@ create table medicos(
     uf char(2) not null,
     cidade varchar(100) not null,
 
-   constraint pk_id primary key(id)
-
+   constraint PK_id primary key(id),
+    CONSTRAINT UQ_crm UNIQUE(crm)
 )
