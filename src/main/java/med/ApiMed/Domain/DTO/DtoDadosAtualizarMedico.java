@@ -8,7 +8,7 @@ import med.ApiMed.Domain.Enum.EnumEspecialidade;
 public record DtoDadosAtualizarMedico (
 
         @NotBlank
-        long id,
+        Long id,
         @NotBlank//valida se não é nulo ou vazio
         String nome,
         String email,

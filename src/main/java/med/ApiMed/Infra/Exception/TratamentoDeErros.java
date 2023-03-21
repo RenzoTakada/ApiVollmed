@@ -1,4 +1,4 @@
-package med.ApiMed.Infra;
+package med.ApiMed.Infra.Exception;
 
 import jakarta.persistence.EntityNotFoundException;
 import org.springframework.http.ResponseEntity;
