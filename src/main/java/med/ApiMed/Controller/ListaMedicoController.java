@@ -19,7 +19,8 @@ public class ListaMedicoController {
     private MedicoRepository repository;
     @GetMapping
     public ResponseEntity<Page<DTOlistagemMedico>> listaDeMedico(@PageableDefault(size =20) Pageable page){
-        return ResponseEntity.ok( repository.findAllByAtivaTrue(page).map(DTOlistagemMedico::new));
+       var ret =  repository.findAllByAtivaTrue(page).map(DTOlistagemMedico::new);
+        return ResponseEntity.ok(ret);
     }
 
 }
