@@ -1,5 +1,6 @@
 package med.ApiMed.Domain.Mapping;
 
+import med.ApiMed.Domain.DTO.DTODadosDetalhamentoMedico;
 import med.ApiMed.Domain.DTO.DtoDadosCadastroMedico;
 import med.ApiMed.Infra.SQlServer.Entities.EntidadeJPAEndereco;
 import med.ApiMed.Infra.SQlServer.Entities.EntidadeJPAMedico;
