@@ -1,7 +1,7 @@
 package med.ApiMed.Domain.DTO;
 
 import med.ApiMed.Domain.Enum.EnumEspecialidade;
-import med.ApiMed.Infra.SQlServer.Models.EntidadeJPAMedico;
+import med.ApiMed.Infra.SQlServer.Entities.EntidadeJPAMedico;
 
 public record  DTOlistagemMedico (Long id, String nome, String Email, String crm, EnumEspecialidade especialidade){
 

@@ -1,4 +1,4 @@
-package med.ApiMed.Infra.SQlServer.Models;
+package med.ApiMed.Infra.SQlServer.Entities;
 
 import jakarta.persistence.Embeddable;
 import lombok.AllArgsConstructor;
